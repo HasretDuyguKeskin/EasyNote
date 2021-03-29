@@ -34,7 +34,7 @@ namespace EasyNote
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -63,6 +63,14 @@ namespace EasyNote
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            //https://docs.microsoft.com/en-us/aspnet/mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "***gizlilik nedeni ile silindi***",
+            //    ClientSecret = "***gizlilik nedeni ile silindi***"
+            //});
+
         }
     }
 }
